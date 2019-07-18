@@ -19,6 +19,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: ganache-cli allowUnlimitedContractSize -l 100000000000 | bash test.sh | fuser -k 8545/tcp
+      - run: ganache-cli allowUnlimitedContractSize -l 100000000000 | bash test.sh | fuser -k 8545/tcp 
 #      - run: bash test.sh 
 
