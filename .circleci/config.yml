@@ -11,6 +11,8 @@ jobs:
 
       - run: npm install 
 
+      - installGanache: npm i -g ganache-cli
+
       - save_cache:
           paths:
             - node_modules
