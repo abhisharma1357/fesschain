@@ -13,6 +13,7 @@ jobs:
 
       - run: sudo npm i -g ganache-cli
 
+      - run: sudo npm i -g truffle@4.1.14 
       - save_cache:
           paths:
             - node_modules
