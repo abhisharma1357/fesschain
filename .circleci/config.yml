@@ -1,24 +1,14 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/node:10
+machine:
+  services:
+    - docker
+  node:
+    version: 10.15.3
 
-    working_directory: ~/repo
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-
-      - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: truffle migrate --reset
+deployment:
+  production:
+    branch: master
+    commands:
+      - docker run -it -v $(pwd):/app ethereum/client-go --datadir /app/geth/data init /app/genesis.json
+      - docker run -d -p 8545:8545 -v $(pwd):/app ethereum/client-go --datadir /app/geth/data --networkid 20170123 --rpc --unlock 0x322ba17d251afdb6d84fd288b5aef518208cccb9 --password /app/password --rpcaddr "0.0.0.0" --verbosity 5
+      - node scripts/waitForEthSync.js
+      - truffle migrate
