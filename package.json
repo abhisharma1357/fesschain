@@ -1,52 +1,31 @@
 {
-  "name": "fesschain",
+  "name": "auditblockwork",
   "version": "1.0.0",
-  "description": "fesschain solidity contracts",
-  "author": {
-    "name": "Abhishek Sharma",
-    "email": "abhisharma.sharma7@gmail.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/abhisharma1357/fesschain"
-  },
-  "bugs": {
-    "url": "https://github.com/abhisharma1357/fesschain/issues"
+  "description": "BlockWRK token and ICO contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "./scripts/test.sh --network=test",
-    "build": "node ./scripts/build.js",
-    "compile": "truffle compile",
-    "migrate:local": "truffle migrate --reset --network=local",
-    "migrate:main": "truffle migrate --network=main",
-    "migrate:ropsten": "truffle migrate --network=ropsten",
-    "migrate:rinkeby": "truffle migrate --network=rinkeby",
-    "migrate:kovan": "truffle migrate --network=kovan",
-    "migrate:sokol": "truffle migrate --network=sokol",
-    "migrate:xdai": "truffle migrate --network=xdai"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/himanshu9/blockworkaudit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/himanshu9/blockworkaudit/issues"
+  },
+  "homepage": "https://gitlab.com/himanshu9/blockworkaudit#README",
+  "devDependencies": {
+    "solidity-coverage": "^0.5.11"
   },
   "dependencies": {
-    "@ensdomains/ens": "0.3.5",
-    "openzeppelin-solidity": "^1.12.0",
-    "solidity-bytes-utils": "0.0.8",
-    "web3": "^1.0.0-beta.55"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^5.1.0",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^12.0.0",
-    "acorn": "^6.1.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "expect": "^24.8.0",
-    "fs-extra": "^7.0.1",
+    "openzeppelin-solidity": "1.12.0",
+    "web3": "^1.0.0-beta.55",
     "ganache-cli": "^6.4.3",
-    "tar": ">=4.4.2",
-    "truffle": "5.0.10",
-    "truffle-hdwallet-provider": "^1.0.8",
-    "web3-utils": "^1.0.0-beta.54"
+    "truffle": "4.1.14"
   }
 }
