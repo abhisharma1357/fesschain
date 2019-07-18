@@ -15,10 +15,6 @@ start_ganache() {
   ganache_pid=$!
 }
 
-rm -rf build
-truffle migrate --reset --compile-all --network development
-truffle test
-
 stop_ganache() {
   # Kill the ganache instance that we started (if we started one and if it's still running).
   if [ -n "$ganache_pid" ] && ps -p $ganache_pid > /dev/null; then
