@@ -19,5 +19,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-        - run: bash test.sh 
+      - run: bash test.sh 
+#      - run: bash test.sh 
 
