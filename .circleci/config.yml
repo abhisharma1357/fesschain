@@ -18,6 +18,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: ganache-cli allowUnlimitedContractSize -l 100000000000
-      - run: bash test.sh
+      - run: ganache-cli allowUnlimitedContractSize -l 100000000000 | bash test.sh
+#      - run: bash test.sh 
 
