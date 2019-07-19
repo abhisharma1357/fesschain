@@ -2,12 +2,6 @@ sudo: required
 language: node_js
 node_js:
   - "8"
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
 cache:
   directories:
   - node_modules
@@ -18,7 +12,6 @@ install:
   - npm install
 script:
   #- npm run lint
-  - stage: test 
   - bash test.sh
 after_script:
 #  - npx solidity-coverage
