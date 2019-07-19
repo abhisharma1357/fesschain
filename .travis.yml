@@ -21,4 +21,4 @@ script:
   - stage: test 
   - bash test.sh
 after_script:
-  - npx solidity-coverage
+#  - npx solidity-coverage
