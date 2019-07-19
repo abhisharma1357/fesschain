@@ -14,10 +14,11 @@ cache:
 install:
   - npm install -g truffle
   - npm i -g ganache-cli
+  - npm install solidity-coverage
   - npm install
 script:
   #- npm run lint
   - stage: test 
   - bash test.sh
 after_script:
-  - npm run coverage && cat coverage/lcov.info | coveralls
+  - npx solidity-coverage
