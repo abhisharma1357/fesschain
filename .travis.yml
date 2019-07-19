@@ -14,7 +14,7 @@ cache:
 install:
   - npm install -g truffle
   - npm i -g ganache-cli
-  - npm install solidity-coverage
+  - npm i -g solidity-coverage
   - npm install
 script:
   #- npm run lint

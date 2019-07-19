@@ -11,7 +11,7 @@ ganache_running() {
 }
 
 start_ganache() {
-  ganache-cli allowUnlimitedContractSize -l 100000000000 &
+  ganache-cli allowUnlimitedContractSize -l 1000000000000 &
   ganache_pid=$!
 }
 
