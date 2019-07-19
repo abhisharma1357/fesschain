@@ -13,16 +13,12 @@ cache:
   - node_modules
 install:
   - npm install -g truffle
-  - npm install -g ganache-cli
+  - npm i -g ganache-cli
   - npm install
 script:
   #- npm run lint
-  - stage: test
-  - npm run ganache-cli allowUnlimitedContractSize -l 10000000000
-  - sleep 5
-  - truffle migrate --network development
-  - npm run test/truffle 
-  - npm run stop
+  - stage: test 
+  - bash test.sh
   - stage: solidity-docs
   - sudo apt-get -y install solc
   - solidity-docgen . contracts docs
