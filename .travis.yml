@@ -19,8 +19,5 @@ script:
   #- npm run lint
   - stage: test 
   - bash test.sh
-  - stage: solidity-docs
-  - sudo apt-get -y install solc
-  - solidity-docgen . contracts docs
 after_script:
   - npm run coverage && cat coverage/lcov.info | coveralls
