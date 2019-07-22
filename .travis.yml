@@ -10,8 +10,10 @@ install:
   - npm i -g ganache-cli
   - npm i -g solidity-coverage
   - npm install
+  - pip install slither-analyzer
 script:
   #- npm run lint
   - bash test.sh
+  - slither .
 after_script:
 #  - npx solidity-coverage

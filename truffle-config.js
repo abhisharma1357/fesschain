@@ -12,7 +12,9 @@
  *   },
  */
 
-
+module.exports = {
+  plugins: [ "truffle-security" ]
+};
 
  module.exports = {
   // This will run the `webpack` command on each build.
