@@ -1,0 +1,9 @@
+{
+    "solidityVersion": "v0.4.24+commit.e67f0147",
+    "contracts": [
+      {
+        "name": "FessChain",
+        "path": "./contracts/FessChain.sol"
+      }
+    ]
+  }
