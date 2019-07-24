@@ -12,7 +12,6 @@ jobs:
       - run: npm install 
       - run: sudo npm i -g ganache-cli
       - run: sudo npm i -g truffle@4.1.14 
-      - run: sudo npm install solgraph
       - run: sudo npm install surya
       - run: sudo npm i -g solidity-coverage
 
@@ -23,7 +22,7 @@ jobs:
 
       - run: bash test.sh
       - run: surya describe contracts/*.sol
-      - run: solgraph contracts/*.sol
+#      - run: solgraph contracts/*.sol
       - run: npx solidity-coverage
 
 
