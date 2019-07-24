@@ -13,9 +13,10 @@ install:
   - npm install -g surya
  
 script:
-#  - bash test.sh
+  - bash test.sh
   - surya describe contracts/*.sol
   - solgraph contracts/*.sol  
+
 after_script:
 #  - npx solidity-coverage
 
