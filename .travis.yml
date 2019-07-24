@@ -18,12 +18,12 @@ script:
   - solgraph contracts/*.sol  
 
 after_script:
-#  - npx solidity-coverage
+  - npx solidity-coverage
 
-#language: python
-#python:
-#    - 3.6
-#install:
-#    - pip install slither-analyzer
-#script:
-# - slither .
+language: python
+python:
+    - 3.6
+install:
+    - pip install slither-analyzer
+script:
+ - slither .
