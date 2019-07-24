@@ -10,12 +10,10 @@ install:
   - npm i -g ganache-cli
   - npm i -g solidity-coverage
   - npm install
-  - pip2 install slither-analyzer
-  - git clone https://github.com/crytic/crytic-compile.git
-  - python setup.py install
+  - npm install -g surya
 script:
   #- npm run lint
   - bash test.sh
-  - slither 
+  - surya describe contracts/*.sol  
 after_script:
 #  - npx solidity-coverage
