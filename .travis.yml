@@ -1,23 +1,8 @@
 sudo: required
-language: node_js
-node_js:
-  - "8"
-cache:
-  directories:
-  - node_modules
+language: python
+python:
+    - 3.6
 install:
-  - npm install -g truffle
-  - npm i -g ganache-cli
-  - npm i -g solidity-coverage
-  - npm install
-  - npm install -g solgraph
-  - npm install -g surya
-  - apt install python3-pip 
-
+    - pip install slither-analyzer
 script:
-  #- npm run lint
-  - bash test.sh
-  - surya describe contracts/*.sol
-  - solgraph contracts/*.sol  
-after_script:
-#  - npx solidity-coverage
+ - slither .
