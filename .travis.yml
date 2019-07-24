@@ -11,7 +11,7 @@ install:
   - npm i -g solidity-coverage
   - npm install
   - npm install -g surya
-  - pip3 install -g slither-analyzer
+  - pip3 install slither-analyzer
 script:
   #- npm run lint
   - bash test.sh
