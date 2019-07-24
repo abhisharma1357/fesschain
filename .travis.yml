@@ -13,6 +13,7 @@ install:
   - npm install -g solgraph
   - npm install -g surya
   - cd slither
+  - ls
   - python setup.py install 
 
 script:
