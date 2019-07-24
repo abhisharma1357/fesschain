@@ -11,7 +11,7 @@ install:
   - npm i -g solidity-coverage
   - npm install
   - npm install -g surya
-  - npm install -g python3.6
+  - npm install -g python@3.6
   - python3 -V
   - pip3 install slither-analyzer
 script:
