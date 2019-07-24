@@ -11,7 +11,8 @@ install:
   - npm i -g solidity-coverage
   - npm install
   - pip2 install slither-analyzer
-  - npm install -g python@2.7
+  - git clone https://github.com/crytic/crytic-compile.git
+  - python setup.py install
 script:
   #- npm run lint
   - bash test.sh
