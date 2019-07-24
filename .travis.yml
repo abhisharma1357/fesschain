@@ -14,7 +14,7 @@ install:
   - npm install -g surya
   - docker --version
   - docker run -i -d luongnguyen/oyente
-  - python oyente.py -s contracts/*.sol
+  - docker cp ./contracts/FessChain.sol oyente/oyente/latest.sol
 
 script:
   #- npm run lint
