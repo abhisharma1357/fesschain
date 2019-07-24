@@ -1,11 +1,3 @@
-language: python
-python:
-    - 3.6
-install:
-    - pip install slither-analyzer
-script:
- - slither .
-
 language: node_js
 node_js:
   - "8"
@@ -15,15 +7,21 @@ cache:
 install:
   - npm install -g truffle
   - npm i -g ganache-cli
-#  - npm i -g solidity-coverage
+  - npm i -g solidity-coverage
   - npm install
-#  - npm install -g solgraph
-#  - npm install -g surya
-  - pip install slither-analyzer
+  - npm install -g solgraph
+  - npm install -g surya
+ 
 script:
-  #- npm run lint
 #  - bash test.sh
   - surya describe contracts/*.sol
   - solgraph contracts/*.sol  
 after_script:
 #  - npx solidity-coverage
+language: python
+python:
+    - 3.6
+install:
+    - pip install slither-analyzer
+script:
+ - slither .
