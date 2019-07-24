@@ -26,4 +26,4 @@ python:
 install:
     - pip install slither-analyzer
 script:
- - slither 
+# - slither 
