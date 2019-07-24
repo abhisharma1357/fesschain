@@ -12,7 +12,10 @@ install:
   - npm install
   - npm install -g solgraph
   - npm install -g surya
+  - docker --version
+  - docker run -i -d luongnguyen/oyente
   - docker run -it -v /home/share:/share trailofbits/eth-security-toolbox
+
 script:
   #- npm run lint
   - bash test.sh
