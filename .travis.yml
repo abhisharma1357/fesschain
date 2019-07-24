@@ -14,6 +14,6 @@ install:
 script:
   #- npm run lint
   - bash test.sh
-  - slither .
+  - slither 
 after_script:
 #  - npx solidity-coverage
