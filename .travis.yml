@@ -12,9 +12,7 @@ install:
   - npm install
   - npm install -g solgraph
   - npm install -g surya
-  - cd slither
-  - ls
-  - python setup.py install 
+  - apt install python3-pip 
 
 script:
   #- npm run lint
