@@ -12,9 +12,8 @@ install:
   - npm install
   - npm install -g solgraph
   - npm install -g surya
-  - docker --version
-  - docker run -i -d luongnguyen/oyente
-  - docker cp ./contracts/FessChain.sol oyente/oyente/latest.sol
+  - cd slither
+  - python setup.py install 
 
 script:
   #- npm run lint
