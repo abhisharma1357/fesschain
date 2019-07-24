@@ -12,6 +12,7 @@ install:
   - npm install
   - npm install -g solgraph
   - npm install -g surya
+  - docker pull trailofbits/eth-security-toolbox
 script:
   #- npm run lint
   - bash test.sh
