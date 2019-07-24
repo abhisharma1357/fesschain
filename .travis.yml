@@ -11,13 +11,9 @@ install:
   - npm i -g solidity-coverage
   - npm install
   - npm install -g surya
-  - python -V
-  - python3 -V
-  - apt install python3-pip  
-  - pip3 install slither-analyzer
 script:
   #- npm run lint
   - bash test.sh
   - surya describe contracts/*.sol  
 after_script:
-  - npx solidity-coverage
+#  - npx solidity-coverage
