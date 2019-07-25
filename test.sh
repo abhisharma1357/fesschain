@@ -31,4 +31,3 @@ fi
 truffle version
 
 node_modules/.bin/truffle test "$@"
-npx codechecks
