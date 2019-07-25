@@ -22,6 +22,7 @@
   "homepage": "https://gitlab.com/himanshu9/blockworkaudit#README",
   "devDependencies": {
     "decode-eth": "^0.1.2",
+    "eth-gas-reporter": "^0.2.6",
     "solidity-coverage": "^0.5.11"
   },
   "dependencies": {
