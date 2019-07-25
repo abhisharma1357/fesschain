@@ -16,7 +16,7 @@ script:
    - bash test.sh
    - surya describe contracts/*.sol
    - solgraph contracts/*.sol  
-
+   - npx codechecks
 after_script:
 #  - npx solidity-coverage
 
