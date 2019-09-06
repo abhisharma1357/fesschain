@@ -1,5 +1,7 @@
 pragma solidity 0.4.24;
 
+//smart contracts
+
 contract Owned {
     address public owner;
     address public newOwner;
